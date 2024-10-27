@@ -6,6 +6,9 @@ import './App.css'
 function App() {
   return (
    <>
+   <button className='btn btn-info'>
+       good luck team!
+   </button>
    </>
   )
 }
