@@ -19,3 +19,8 @@ FScodersHub-Community est une communauté de développeurs passionnés qui se r�
 - [@badr wassif](https://www.github.com/nxxgh) 
 - [@abderrahim haijoub](https://www.github.com/vbdw) 
 - [@YoussefFarhat22](https://www.github.com/YoussefFarhat22)
+- ## Environment 
+To start the project, use the following command, as we are using Vite.js for faster compilation:
+cd my-project
+npm run dev
+
