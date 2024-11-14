@@ -9,10 +9,10 @@ import ProjectSection from './components/ProjectSection'
 function App() {
   return (
     <>
-      {/* <Nav/>
+      <Nav/>
       <HomeSection />
       <ProjectSection/>
-      <ContactSection/> */}
+      <ContactSection/>
     </>
   )
 }
