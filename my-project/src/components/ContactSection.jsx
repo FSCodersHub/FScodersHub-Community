@@ -1,4 +1,5 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ContactSection = () => {
@@ -23,10 +24,16 @@ const ContactSection = () => {
         
 
      }
+=======
+
+const ContactSection = () => {
+     const [activeButton, setActiveButton] = useState("Web mobile");
+>>>>>>> d0cf644ce0540aaf7f1b000b906340c6f77a3850
 
       const handleClick = (buttonName) => {
        setActiveButton(buttonName);
       };
+<<<<<<< HEAD
     const handleChangeInputs = (e) => {
            const {name,value}=e.target;
            setFormData({...formData,[name]:value.trim()});
@@ -42,6 +49,10 @@ const ContactSection = () => {
     return (
        <>
        <ToastContainer/>
+=======
+    
+    return (
+>>>>>>> d0cf644ce0540aaf7f1b000b906340c6f77a3850
        <div className=" my-5 mt-6 max-w-6xl max-lg:max-w-3xl mx-auto bg-gray-100 rounded-lg">
             <div className="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
                 <div>
@@ -155,6 +166,7 @@ const ContactSection = () => {
     </div>
 
                     <form className="mt-8 space-y-4">
+<<<<<<< HEAD
                         <input onChange={(e)=>handleChangeInputs(e)} name="name" type='text'  placeholder='Name'
                             className="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#009B72]" />
                         <input onChange={(e)=>handleChangeInputs(e)} name="email" type='email'  placeholder='Email'
@@ -164,6 +176,17 @@ const ContactSection = () => {
                         <textarea   onChange={(e)=>handleChangeInputs(e)} name="message"   placeholder='Message'  rows="6"
                             className="w-full rounded-lg px-4 text-gray-800 text-sm pt-3 outline-[#009B72]"></textarea>
                         <button onClick={(e)=>handleSubmit(e)}  type='button'
+=======
+                        <input type='text' placeholder='Name'
+                            className="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#009B72]" />
+                        <input type='email' placeholder='Email'
+                            className="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#009B72]" />
+                        <input type='text' placeholder='Subject'
+                            className="w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-[#009B72]" />
+                        <textarea placeholder='Message' rows="6"
+                            className="w-full rounded-lg px-4 text-gray-800 text-sm pt-3 outline-[#009B72]"></textarea>
+                        <button type='button'
+>>>>>>> d0cf644ce0540aaf7f1b000b906340c6f77a3850
                             className="text-white bg-[#009B72] hover:bg-[#009B72]/75 tracking-wide rounded-lg text-sm px-4 py-3 flex items-center justify-center w-full !mt-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#fff' className="mr-2" viewBox="0 0 548.244 548.244">
                                 <path fillRule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clipRule="evenodd" data-original="#000000" />
@@ -174,7 +197,10 @@ const ContactSection = () => {
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         </>
+=======
+>>>>>>> d0cf644ce0540aaf7f1b000b906340c6f77a3850
     );
 };
 
