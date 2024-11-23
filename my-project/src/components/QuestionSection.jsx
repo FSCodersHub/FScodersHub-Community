@@ -70,11 +70,7 @@ function QuestionsSection() {
   const displayedQuestions = showAll ? questions : questions.slice(0, 6); // Affiche 6 questions par défaut
 
   return (
-<<<<<<< HEAD
     <section className=" py-12 px-6 md:px-24 lg:px-16  w-full">
-=======
-    <section className="bg-gray-100 py-12 px-6 md:px-10 lg:px-16 max-w-5xl mx-auto">
->>>>>>> d0cf644ce0540aaf7f1b000b906340c6f77a3850
       <div className="flex flex-col md:flex-row md:space-x-8">
         {/* Sidebar title, centered vertically */}
         <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0">
@@ -89,11 +85,7 @@ function QuestionsSection() {
             <div
               key={index}
               className={`rounded-lg shadow-lg overflow-hidden transition-all duration-300 ${
-<<<<<<< HEAD
                 activeIndex === index ? 'bg-gray-100 p-6' : 'bg-gray-100 p-4'
-=======
-                activeIndex === index ? 'bg-white p-6' : 'bg-white p-4'
->>>>>>> d0cf644ce0540aaf7f1b000b906340c6f77a3850
               }`}
               style={{
                 maxHeight: activeIndex === index ? '200px' : '60px', // Adjust as needed
@@ -101,11 +93,7 @@ function QuestionsSection() {
             >
               <button
                 onClick={() => handleToggle(index)}
-<<<<<<< HEAD
                 className="w-full flex justify-between items-center text-left focus:outline-none "
-=======
-                className="w-full flex justify-between items-center text-left focus:outline-none"
->>>>>>> d0cf644ce0540aaf7f1b000b906340c6f77a3850
               >
                 <span className="text-gray-900 font-medium text-sm">{item.question}</span>
                 <svg

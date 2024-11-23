@@ -6,7 +6,7 @@ import ContactSection from './components/ContactSection'
 import HomeSection from './components/HomeSection'
 import ProjectSection from './components/ProjectSection'
 import QuestionsSection from './components/QuestionSection'
-import Footer from './components/Footer'
+
 import Nav from './components/nav'
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <ProjectSection/>
       <ContactSection/> 
       <QuestionsSection/>
-      <Footer/> */}
+     */}
  
     </>
   )
