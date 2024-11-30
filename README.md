@@ -64,8 +64,7 @@ This project is powered by [Vite.js](https://vitejs.dev/) for fast and efficient
 7. **License**: You can add your licensing information in this section if applicable.
 
 
-<<<<<<< HEAD
-=======
+
 
 
 # FSCodersHub-Community
@@ -94,5 +93,3 @@ To start the project, use the following command, as we are using Vite.js for fas
 cd my-project
 
 npm run dev
-
->>>>>>> 80bca00137778edf68518dd8fe92667a174f9148
