@@ -6,9 +6,19 @@
   transition: filter 300ms;
 }
 
-body{
-  background-color: #fff;
+.dark body,html{
+  color: white;
+ background-color: #000300;
+
+
 }
+*{
+   font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);

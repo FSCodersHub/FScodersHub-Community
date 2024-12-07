@@ -1,11 +1,15 @@
 import Logo from "../assets/verification.png";
-
+import { useContext } from "react";
+import { useToggle } from "./ToogleProvider";
 export default function HomeSection() {
+    const Toogle=useToggle();
+    console.log(Toogle.toggle);
     return <>
         <section className="w-full lg:h-[80vh]  flex flex-wrap px-12 py-10">
             <div className="w-full lg:w-1/2 h-full flex flex-col justify-center gap-5 text-start px-5">
             <h1 className="lg:w-5/6 text-4xl lg:text-[50px] lg:leading-[50px] font-semibold">
-  Bienvenue sur notre Plateforme
+            {Toogle.toggle==='fr'?" Bienvenue sur notre Plateforme" :"Welcome to our Platform"}
+ 
 </h1>
 <p className="lg:w-5/6 text-lg lg:text-2xl text-gray-600 font-semibold">
   Nous proposons des services innovants de création d'applications web et mobiles. 
