@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useContext} from 'react';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { RxArrowTopRight } from "react-icons/rx";
 import project_1 from '../assets/project-1.jpg'

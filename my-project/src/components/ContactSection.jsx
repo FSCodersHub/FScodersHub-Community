@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
+import emailjs from 'emailjs-com'; // Make sure you import emailjs
 import 'react-toastify/dist/ReactToastify.css';
 const ContactSection = () => {
      const [activeButton, setActiveButton] = useState("Web mobile");
@@ -32,12 +33,37 @@ const ContactSection = () => {
            setFormData({...formData,[name]:value.trim()});
            
       };
-      const handleSubmit= async (e)=>{
-          e.preventDefault();
-            if(ValidateFom()){
-                toast.success('Merci ! Votre message a bien été envoyé.');
-            }
-    }
+   
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        if ( ValidateFom()) {
+            // Send email using emailjs
+            emailjs
+                .send(
+                    "service_i0welv9",   // Replace with your Service ID
+                    "template_9px3uig",   // Replace with your Template ID
+                    formData,              // Send contact form data
+                    "uxWKIwBThJlF-L6GU"  // Replace with your User ID (public key)
+                )
+                .then((result) => {
+                    console.log(result.text);
+                    toast.success('Merci ! Votre message a bien été envoyé.');
+                    setContact({
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: '',
+                    }); // Reset the form
+                    setSuccess(true);
+                })
+                .catch((error) => {
+                    console.error(error.text);
+                    toast.error('Une erreur s\'est produite lors de l\'envoi du message.');
+                });
+        }
+    };
+   
     
     return (
        <>
