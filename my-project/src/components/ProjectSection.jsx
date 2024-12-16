@@ -43,8 +43,8 @@ const ProjectSection = () => {
     };
 
     return (
-        <div className="w-full py-24 dark:bg-[#9aaa9a]">
-            <h2 className="text-3xl font-bold text-center mb-16">Nos Projets</h2>
+        <div className="w-full py-32 dark:bg-[#cad0ca] bg-white">
+            <h2 className="text-4xl font-bold text-center mb-16 dark:text-black">Nos Projets</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center xl:ps-10 ">
                 
                 {/* Project Description Section */}

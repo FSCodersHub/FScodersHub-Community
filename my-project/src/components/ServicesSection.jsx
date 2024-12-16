@@ -47,7 +47,7 @@ export default function ServicesSection() {
     ];
 
     return (
-        <div className="w-full dark:bg-[#000c00]">
+        <div className="w-full dark:bg-[#000c00] bg-white">
         <div className="max-w-7xl  mx-auto py-16 px-4 ">
             <h1 className="text-3xl font-bold text-center mb-12 dark:text-white">Ce que Nous Offrons</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-x-24">

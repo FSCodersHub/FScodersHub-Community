@@ -9,7 +9,7 @@ const Theme = {
 
 // Set up the initial state
 const initialState = {
-  theme: Theme.SYSTEM,
+  theme: Theme.LIGHT,  // Change default theme to 'light'
   setTheme: () => null,
 };
 
@@ -19,7 +19,7 @@ const ThemeProviderContext = createContext(initialState);
 // ThemeProvider component
 export function ThemeProvider({
   children,
-  defaultTheme = Theme.SYSTEM,
+  defaultTheme = Theme.LIGHT, // Default to 'light' mode
   storageKey = "vite-ui-theme",
   ...props
 }) {

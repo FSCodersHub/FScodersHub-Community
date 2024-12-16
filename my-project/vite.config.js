@@ -9,4 +9,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: 'FScodersHub-Community', // Add this line to set the base path for GitHub Pages
 })

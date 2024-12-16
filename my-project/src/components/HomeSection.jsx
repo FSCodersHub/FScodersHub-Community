@@ -19,7 +19,7 @@ export default function HomeSection() {
     ];
 
     return (
-        <section className="w-full lg:h-[80vh] flex flex-wrap px-12">
+        <section className="w-full lg:h-[80vh] flex flex-wrap px-12 bg-white dark:bg-[#000c00]">
             <div className="w-full lg:w-1/2 h-full flex flex-col justify-center gap-5 text-start px-5 py-10">
                 <h1 className="lg:w-5/6 text-4xl lg:text-[50px] lg:leading-[50px] font-semibold">
                     Bienvenue sur notre Plateforme

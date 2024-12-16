@@ -70,11 +70,11 @@ function QuestionsSection() {
   const displayedQuestions = showAll ? questions : questions.slice(0, 6); // Affiche 6 questions par défaut
 
   return (
-    <section className=" py-12 px-6 md:px-24 lg:px-48 w-full">
+    <section className=" py-24 px-6 md:px-24 lg:px-48 w-full bg-white dark:bg-[#cad0ca]">
       <div className="flex flex-col md:flex-row md:space-x-8">
         {/* Sidebar title, centered vertically */}
         <div className="md:w-1/3 flex items-center justify-center mb-6 md:mb-0">
-          <h2 className="text-3xl font-bold text-gray-800 text-center dark:text-white">
+          <h2 className="text-3xl font-bold text-gray-800 text-center dark:text-black">
           Vous avez une question ? Consultez la FAQ
           </h2>
         </div>

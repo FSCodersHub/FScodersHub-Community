@@ -58,27 +58,41 @@ export default function Nav() {
         </button>
          </div>
      
-        <div className="hidden lg:flex w-3/5 gap-12 justify-center items-center font-semibold ">
-        <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
-        <FaHome className="mr-2" /> Home
+      
+        <ul className="hidden lg:flex w-3/5 gap-12 justify-center items-center font-semibold ">
+   
+    <li>
+      <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
+      <FaHome className="mr-2" /> Home
       </p>
+    </li>
+    <li>
       <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
         <FaInfoCircle className="mr-2" /> À propos
       </p>
+    </li>
+    <li>
       <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
         <FaCogs className="mr-2" /> Services
       </p>
+    </li>
+    <li>
       <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
         <FaFolder className="mr-2" /> Ressources
       </p>
+    </li>
+    <li>
       <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
         <FaCalendarAlt className="mr-2" /> Événements
       </p>
+    </li>
+    <li>
       <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
         <FaEnvelope className="mr-2" /> Contact
       </p>
-
-        </div>
+    </li>
+  </ul>
+        
         <div className="hidden lg:flex w-1/6 justify-center items-center space-x-4">
       
            <DropdownMenu>
@@ -138,12 +152,39 @@ export default function Nav() {
       </div>
       {isOpen && (
         <div className="lg:hidden flex flex-col items-center space-y-4 py-4 border-t border-gray-200">
-          <p className="hover:text-gray-700 cursor-pointer">Home</p>
-          <p className="hover:text-gray-700 cursor-pointer">À propos</p>
-          <p className="hover:text-gray-700 cursor-pointer">Services</p>
-          <p className="hover:text-gray-700 cursor-pointer">Ressources</p>
-          <p className="hover:text-gray-700 cursor-pointer">Événements</p>
-          <p className="hover:text-gray-700 cursor-pointer">Blog</p>
+       <ul className="space-y-4">
+    <li>
+      <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
+        <FaHome className="mr-2" /> Home
+      </p>
+    </li>
+    <li>
+      <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
+        <FaInfoCircle className="mr-2" /> À propos
+      </p>
+    </li>
+    <li>
+      <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
+        <FaCogs className="mr-2" /> Services
+      </p>
+    </li>
+    <li>
+      <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
+        <FaFolder className="mr-2" /> Ressources
+      </p>
+    </li>
+    <li>
+      <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
+        <FaCalendarAlt className="mr-2" /> Événements
+      </p>
+    </li>
+    <li>
+      <p className="flex items-center hover:text-[#009B72] dark:hover:text-[#009B72] cursor-pointer">
+        <FaEnvelope className="mr-2" /> Contact
+      </p>
+    </li>
+  </ul>
+
           <div className="flex space-x-4 pt-4">
              
            

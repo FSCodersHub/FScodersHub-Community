@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import logo_dark from '../assets/logo-dark.png';
 const Footer = () => {
   return (
-    <footer className="bg-[#010401] text-white py-10">
+    <footer className="bg-[#000c00] text-white py-10 border-t border-gray-700">
       <div className="container mx-auto px-6">
         <h2 className="text-center text-2xl font-bold mb-8">
           Let’s Create, Collaborate, and Innovate Together

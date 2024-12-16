@@ -68,7 +68,7 @@ const ContactSection = () => {
     return (
        <>
        <ToastContainer/>
-       <div className="w-full dark:bg-[#9aaa9a] py-12">
+       <div className="  border-b border-[#022902] w-full dark:bg-[#cad0ca] py-20 bg-white">
        <div className=" my-5 mt-6 max-w-6xl max-lg:max-w-3xl xl:w-[100%] mx-auto bg-gray-100 rounded-lg dark:text-black ">
             <div className="grid lg:grid-cols-2 items-center gap-14 sm:p-8 p-4 font-[sans-serif]">
                 <div>
