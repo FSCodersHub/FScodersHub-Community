@@ -17,11 +17,17 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
     const { setTheme,theme } = useTheme();
-   console.log(theme);
+   console.log(theme)
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
+const handleToggleMode=()=>{
+  if(theme=='light'){
+    setTheme('dark')
+  }else{
+    setTheme('light');
+  }
+}
   return (
     <nav className="w-full dark:text-white">
       <div className="flex justify-between items-center px-4 py-3 lg:px-8">
@@ -30,26 +36,13 @@ export default function Nav() {
         </div>
          <div className="flex lg:hidden gap-5">
 
-            <DropdownMenu>
-  <DropdownMenuTrigger asChild>
-    <Button variant='dark'  size="icon">
+     
+    <Button onClick={handleToggleMode} variant='dark'  size="icon">
       <FaSun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <FaMoon  className="  absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       <span className="sr-only">Toggle theme</span>
     </Button>
-  </DropdownMenuTrigger>
-  <DropdownMenuContent align="end">
-    <DropdownMenuItem onClick={() => setTheme("light")}>
-      Light
-    </DropdownMenuItem>
-    <DropdownMenuItem onClick={() => setTheme("dark")}>
-      Dark
-    </DropdownMenuItem>
-    <DropdownMenuItem onClick={() => setTheme("system")}>
-      System
-    </DropdownMenuItem>
-  </DropdownMenuContent>
-          </DropdownMenu>
+  
              <button
           className="text-gray-800 text-2xl lg:hidden"
           onClick={toggleMenu}
@@ -95,26 +88,12 @@ export default function Nav() {
         
         <div className="hidden lg:flex w-1/6 justify-center items-center space-x-4">
       
-           <DropdownMenu>
-  <DropdownMenuTrigger asChild>
-    <Button variant='dark'  size="icon">
+        <Button onClick={handleToggleMode} variant='dark'  size="icon">
       <FaSun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <FaMoon  className="  absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
       <span className="sr-only">Toggle theme</span>
     </Button>
-  </DropdownMenuTrigger>
-  <DropdownMenuContent align="end">
-    <DropdownMenuItem onClick={() => setTheme("light")}>
-      Light
-    </DropdownMenuItem>
-    <DropdownMenuItem onClick={() => setTheme("dark")}>
-      Dark
-    </DropdownMenuItem>
-    <DropdownMenuItem onClick={() => setTheme("system")}>
-      System
-    </DropdownMenuItem>
-  </DropdownMenuContent>
-          </DropdownMenu>
+  
           {/* Base */}
 {/* Base */}
 {/* Base */}
