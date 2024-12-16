@@ -1,54 +1,57 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-// Define possible theme values
+// Définir les valeurs possibles pour le thème
 const Theme = {
   DARK: "dark",
   LIGHT: "light",
   SYSTEM: "system",
 };
 
-// Set up the initial state
+// Initialiser l'état du thème par défaut
 const initialState = {
-  theme: Theme.LIGHT,  // Change default theme to 'light'
+  theme: Theme.LIGHT, // Changer le thème par défaut en 'light'
   setTheme: () => null,
 };
 
-// Create the context
+// Créer le contexte pour le thème
 const ThemeProviderContext = createContext(initialState);
 
-// ThemeProvider component
+// Composant ThemeProvider
 export function ThemeProvider({
   children,
-  defaultTheme = Theme.LIGHT, // Default to 'light' mode
+  defaultTheme = Theme.LIGHT, // Le thème par défaut est 'light'
   storageKey = "vite-ui-theme",
   ...props
 }) {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem(storageKey) || defaultTheme
-  );
+  const [theme, setTheme] = useState(() => {
+    // Vérifier si le thème est défini dans le localStorage
+    const storedTheme = localStorage.getItem(storageKey);
+    return storedTheme || defaultTheme; // Si un thème est trouvé, utiliser celui-ci
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
 
+    // Retirer les classes existantes
     root.classList.remove("light", "dark");
 
+    // Appliquer le thème en fonction de la valeur actuelle
     if (theme === Theme.SYSTEM) {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? Theme.DARK
         : Theme.LIGHT;
-
       root.classList.add(systemTheme);
-      return;
+    } else {
+      root.classList.add(theme); // Appliquer le thème clair ou sombre
     }
-
-    root.classList.add(theme);
   }, [theme]);
 
+  // Changer le thème et le stocker dans le localStorage
   const value = {
     theme,
     setTheme: (newTheme) => {
-      localStorage.setItem(storageKey, newTheme);
-      setTheme(newTheme);
+      localStorage.setItem(storageKey, newTheme); // Enregistrer dans localStorage
+      setTheme(newTheme); // Mettre à jour le thème
     },
   };
 
@@ -59,7 +62,7 @@ export function ThemeProvider({
   );
 }
 
-// Custom hook to use the theme context
+// Hook personnalisé pour utiliser le contexte du thème
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext);
 

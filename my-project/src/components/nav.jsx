@@ -17,7 +17,7 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
 
     const { setTheme,theme } = useTheme();
-
+   console.log(theme);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };

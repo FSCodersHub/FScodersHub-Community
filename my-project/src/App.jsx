@@ -10,11 +10,12 @@ import Nav from './components/nav'
 import Footer from './components/Footer'
 import ServicesSection from './components/ServicesSection'
 function App({children}) {
+  
   return (
     <>   
 
 
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       {children}
  
       <Nav/>
